@@ -7,7 +7,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('magic 8 ball'),
+          title: Text('Ask me anything'),
         ),
         body: BallClass(),
       ),

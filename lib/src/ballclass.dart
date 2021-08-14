@@ -7,10 +7,10 @@ class BallClass extends StatefulWidget {
 }
 
 class _BallClassState extends State<BallClass> {
-  int num = 1;
+  int num = 3;
 
   void generate() {
-    num = Random().nextInt(6) + 1;
+    num = Random().nextInt(5) + 1;
   }
 
   @override
@@ -19,11 +19,11 @@ class _BallClassState extends State<BallClass> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'magic ball app',
+          'the magic app',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 30.0,
-            //fontFamily: 'Vesta Night - Personal Use',
+            fontFamily: 'Vesta Night - Personal Use',
           ),
         ),
         SizedBox(
@@ -33,10 +33,14 @@ class _BallClassState extends State<BallClass> {
           margin: EdgeInsets.all(10.0),
           child: Container(
             child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    generate();
+                  });
+                },
                 child: Padding(
                   padding: EdgeInsets.all(25.0),
-                  child: Image.asset('images/ball1.png'),
+                  child: Image.asset('images/ball$num.png'),
                 )),
           ),
         )
