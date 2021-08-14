@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'ballclass.dart';
 
 class App extends StatelessWidget {
   @override
@@ -8,6 +9,7 @@ class App extends StatelessWidget {
         appBar: AppBar(
           title: Text('magic 8 ball'),
         ),
+        body: BallClass(),
       ),
     );
   }
